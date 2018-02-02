@@ -1,0 +1,8 @@
+No value specified for parameter 5 , Thu Feb 01 19:56:08 EST 2018
+Can not issue data manipulation statements with executeQuery(). , Thu Feb 01 20:51:41 EST 2018
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM artist WHERE artist_id =  '441e0ff9-4887-4717-bbd5-1e0383121f00'' at line 1 , Thu Feb 01 20:53:14 EST 2018
+Cannot delete or update a parent row: a foreign key constraint fails (`spotify_knockoff`.`song_artist`, CONSTRAINT `fk_song_has_artist_artist1` FOREIGN KEY (`fk_artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE NO ACTION ON UPDATE NO ACTION) , Thu Feb 01 20:53:55 EST 2018
+Cannot delete or update a parent row: a foreign key constraint fails (`spotify_knockoff`.`song_artist`, CONSTRAINT `fk_song_has_artist_artist1` FOREIGN KEY (`fk_artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE NO ACTION ON UPDATE NO ACTION) , Thu Feb 01 20:59:48 EST 2018
+Can not issue data manipulation statements with executeQuery(). , Thu Feb 01 21:22:34 EST 2018
+Can not issue data manipulation statements with executeQuery(). , Thu Feb 01 21:22:34 EST 2018
+Cannot delete or update a parent row: a foreign key constraint fails (`spotify_knockoff`.`song_artist`, CONSTRAINT `fk_song_has_artist_song` FOREIGN KEY (`fk_song_id`) REFERENCES `song` (`song_id`) ON DELETE NO ACTION ON UPDATE NO ACTION) , Thu Feb 01 22:03:12 EST 2018
