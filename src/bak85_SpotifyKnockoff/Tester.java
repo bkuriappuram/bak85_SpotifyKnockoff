@@ -49,7 +49,7 @@ public class Tester {
 		
 		System.out.println("\nTesting delete album... \n");
 		
-		Damn.deleteAlbum(Damn.getAlbumID()); //deletes an album from the databse by AlbumID
+		Damn.deleteAlbum(Damn.getAlbumID()); //deletes an album from the database by AlbumID
 		
 	}
 }
