@@ -245,7 +245,7 @@ public class Album {
 			conn.close();
 			db = null;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			ErrorLogger.log(e.getMessage());
 			e.printStackTrace();
 		}
 	}

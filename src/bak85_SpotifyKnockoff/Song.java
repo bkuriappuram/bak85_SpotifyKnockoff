@@ -232,7 +232,7 @@ public class Song {
 			conn.close();
 			db = null;
 		} catch (SQLException e) {
-			
+			ErrorLogger.log(e.getMessage());
 			e.printStackTrace();
 		}
 		
