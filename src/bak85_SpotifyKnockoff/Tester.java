@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.Vector;
 
 public class Tester {
 	
@@ -49,7 +50,7 @@ public class Tester {
 		
 		System.out.println("\nTesting delete album... \n");
 		
-		Damn.deleteAlbum(Damn.getAlbumID()); //deletes an album from the database by AlbumID
+		Damn.deleteAlbum(Damn.getAlbumID()); //deletes an album from the database by AlbumID 
 		
 	}
 }

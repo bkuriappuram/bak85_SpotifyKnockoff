@@ -85,6 +85,17 @@ public class Song {
 				
 	}
 	
+	public Song(String songID, String title, double length, String releaseDate, String recordDate){
+		
+		this.title = title;
+		this.length = length;
+		this.releaseDate = releaseDate;
+		this.recordDate = recordDate;
+		this.songID = songID;
+		
+		songArtists = new Hashtable<String, Artist>();
+	}
+	
 	
 	/** Deletes a song from the junction table using SongID to enable complete deletion.
 	 * Calls the helper method deleteSongCompletely() to remove 

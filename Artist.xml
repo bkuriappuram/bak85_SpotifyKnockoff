@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artistList>
+	<artist>
+		<artistID></artistID>
+		<firstName></firstName>
+		<lastName></lastName>
+		<bio></bio>
+	</artist>
+</artistList>
