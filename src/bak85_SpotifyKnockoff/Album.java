@@ -7,19 +7,46 @@ import java.sql.SQLException;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.UUID;
+import javax.persistence.*;
 
+
+@Entity
+@Table (name = "album")
 public class Album {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	@Column (name = "album_id")
 	private String albumID;
+	
+	@Column (name = "title")
 	private String title;
+	
+	@Column (name = "release_date")
 	private String releaseDate;
+	
+	@Column (name = "cover_image_path")
 	private String coverImagePath;
+	
+	@Column (name = "recording_company_name")
 	private String recordingCompany;
+	
+	@Column (name = "number_of_tracks")
 	private int numberOfTracks;
+	
+	@Column (name = "PMRC_rating")
 	private String pmrcRating;
+	
+	@Column (name = "length")
 	private double length;
 	
+	@Transient
 	Map <String, Song> albumSongs;
+	
+	public Album() {
+		super();
+	}
 	
 	
 	/**Constructor used when creating a new Album in the database*/
@@ -285,5 +312,47 @@ public class Album {
 	public double getLength() {
 		return length;
 	}
+
+
+	public void setAlbumID(String albumID) {
+		this.albumID = albumID;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+
+
+	public void setRecordingCompany(String recordingCompany) {
+		this.recordingCompany = recordingCompany;
+	}
+
+
+	public void setNumberOfTracks(int numberOfTracks) {
+		this.numberOfTracks = numberOfTracks;
+	}
+
+
+	public void setPmrcRating(String pmrcRating) {
+		this.pmrcRating = pmrcRating;
+	}
+
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+
+	public void setAlbumSongs(Map<String, Song> albumSongs) {
+		this.albumSongs = albumSongs;
+	}
+	
+	
 
 }

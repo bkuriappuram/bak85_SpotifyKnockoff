@@ -1,25 +1,51 @@
 package bak85_SpotifyKnockoff;
 
 import java.util.Map;
+
+import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
+@Entity
+@Table (name = "song")
 public class Song {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	@Column (name = "song_id")
 	private String songID;
+	
+	@Column (name = "title")
 	private String title;
+	
+	@Column (name = "length")
 	private double length;
+	
+	@Column (name = "file_path")
 	private String filePath;
+	
+	@Column (name = "release_date")
 	private String releaseDate;
+	
+	@Column (name = "record_date")
 	private String recordDate;
 	
+	@Transient
 	Map<String, Artist> songArtists;
 	
-	
-	
+	/**Default constructor used for JPA */
+	public Song() {
+		super();
+	}
+
+
 	/** Constructor used to create new entries to the database*/
 	public Song(String title, double length, String releaseDate, String recordDate){
 		
@@ -276,5 +302,35 @@ public class Song {
 	public String getRecordDate() {
 		return recordDate;
 	}
+	
+	public void setSongID(String songID) {
+		this.songID = songID;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+
+
+	public void setRecordDate(String recordDate) {
+		this.recordDate = recordDate;
+	}
+
+
+	public void setSongArtists(Map<String, Artist> songArtists) {
+		this.songArtists = songArtists;
+	}
+
 
 }
